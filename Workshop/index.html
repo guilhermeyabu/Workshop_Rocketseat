@@ -21,39 +21,7 @@
     <meta charset="UTF-8" />
     <title>Casa Criativa</title>
 
-    <style>
-        /*
-            CSS - FOLHA DE ESTILO EM CASCATA, estilização.        
-        */
-
-
-        body {
-            background: #e5e5e5;
-            color: #25282B;
-            text-align: center;
-        }
-
-        button {
-            color: #ff5E84;
-            border: none;
-            font-weight: bold;
-            background: none;
-        }
-
-        .hide {
-            display: none;
-        }
-
-        .fat {
-            background: #ff5E84;
-            color: white;
-        }
-
-        #footer a {
-            color: #25282b;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <!--Corpo da página, mostra conteúdo, informações-->
@@ -77,12 +45,7 @@
 
     <p id="footer">com ❤️ <a href="http://rocketseat.com.br">Rocketseat</a></p>
 
-    <script>
-        document.querySelector("button.fat").addEventListener("click", () => {
-            document.querySelector("#footer").classList.toggle("hide")
-        })
-        
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
