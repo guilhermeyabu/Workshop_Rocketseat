@@ -2,6 +2,30 @@ body {
     background: #e5e5e5;
     color: #25282B;
     text-align: center;
+    margin: 0;
+}
+
+body #container {
+    width: 80%;
+    max-width: 980px;
+
+    margin: 40px auto; /*Cima Baixo = 40px e esquerda direita = auto*/
+    display: flex;
+}
+
+#intro {
+    width: 300px;
+    margin-right: 20px;
+}
+
+main {
+    margin: 32px 0;
+}
+
+#buttons {
+    display: flex;
+    margin-bottom: 32px;
+    justify-content: space-evenly;
 }
 
 button {
@@ -9,18 +33,37 @@ button {
     border: none;
     font-weight: bold;
     background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    text-decoration: underline;
 }
 
 .hide {
     display: none;
 }
 
-.fat {
+button.fat {
     background: #ff5E84;
     color: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16);
+
 }
 
-#footer a {
+button.fat:hover {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
     color: #25282b;
     text-decoration: none;
 }
