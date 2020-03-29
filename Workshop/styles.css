@@ -1,8 +1,24 @@
 body {
     background: #e5e5e5;
     color: #25282B;
-    text-align: center;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: #ff5E84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p, .description {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
 }
 
 body #container {
@@ -31,18 +47,18 @@ main {
 button {
     color: #ff5E84;
     border: none;
-    font-weight: bold;
     background: none;
     cursor: pointer;
     outline: none;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
 }
 
 button:hover {
     text-decoration: underline;
-}
-
-.hide {
-    display: none;
 }
 
 button.fat {
@@ -61,9 +77,139 @@ button.fat:hover {
 
 footer {
     text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #777;
 }
 
 footer a {
-    color: #25282b;
+    opacity: 0.7;
+}
+
+.idea {
+    display: flex;
+    margin-bottom: 32px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+}
+
+.idea img {
+    width: 60px;
+    height: 60px;
+    margin-right: 32px;
+}
+
+.idea h3 {
+    margin: 0;
+}
+
+.idea p {
+    margin: 8px 0;
+    color: #777;
+}
+
+.idea .description {
+    margin: 16px 0;
+}
+
+/* modal */
+#modal {
+    background: #ff5E84;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    transition: all 400ms;
+}
+
+#modal .content {
+    margin-top: 128px;
+    color: white;
+}
+
+#modal .content h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#modal form {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#modal form input, 
+form textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid rgba(141, 25, 52, 0.5);
+    outline: none;
+    font-size: 16px;
+}
+
+#modal .content form div:nth-child(3),
+#modal .content form div:nth-child(4),
+#modal .content form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+#modal form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+#modal form a {
+    background-color: #ffffff22;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    align-self: end;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 400ms;
+}
+
+#modal form a:hover {
+    background: white;
+    color: #ff5E84;
     text-decoration: none;
+}
+
+#modal form button {
+    background: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 32px;
+    grid-column: 2;
+    justify-self: end;
+    transition: 400ms;
+}
+
+#modal form button:hover {
+    background-color: #0984e3;
+    color: white;
+    text-decoration: none;
+}
+
+#modal.hide {
+    opacity: 0;
+    visibility: hidden;
 }
